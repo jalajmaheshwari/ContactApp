@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App Container */
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-container input[type="text"] {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  width: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Contacts Container */
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contact Item */
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-number {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-actions button {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-actions button:first-child {
+  background-color: #2196f3;
+  margin-right: 10px;
+}
+
+.contact-actions button:last-child {
+  background-color: #f44336;
+}
+
+/* No Contacts Message */
+.no-contacts {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+/* Add Contact Button */
+.add-contact-button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2196f3;
+  color: #fff;
+  cursor: pointer;
+  margin-top: -20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.add-contact-button:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.modal-header .close {
+  font-size: 36px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.modal-header .close:hover {
+  color: #555;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.modal-body input[type="text"] {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 5pxrgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.modal-footer button {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.modal-footer button:first-child {
+  background-color: #f44336;
+}
+
+.modal-footer button:last-child {
+  background-color: #2196f3;
+}
+.bar-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
